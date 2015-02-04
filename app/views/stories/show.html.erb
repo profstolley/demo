@@ -1,19 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
+<h1>
   <%= @story.title %>
-</p>
+</h1>
 
 <p>
-  <strong>Author:</strong>
-  <%= @story.author %>
+  by <%= @story.author %> at <%= @story.created_at %>
+  My name is <%= @myname %>
 </p>
 
-<p>
-  <strong>Article:</strong>
+<div>
   <%= @story.article %>
-</p>
+</div>
 
 <%= link_to 'Edit', edit_story_path(@story) %> |
 <%= link_to 'Back', stories_path %>
